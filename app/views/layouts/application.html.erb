@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SmartCoos</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<!-- Bootstrap -->
+	<link href="stylesheets/bootstrap.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      
+      <!-- Custom styles for this template -->
+
+      <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+      <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+      <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+      
+    </head>
+    <body>
+     <div class="container">
+      <div class="header">
+       <a href="/"><img src="/assets/logo.png" width='200' height= '44s'>
+       </img></a>
+       <ul class="nav nav-pills pull-right">
+        <li class="active">
+
+          <%= link_to "Home", root_path %></li></li>
+          <li>
+
+            <%= link_to "About", "http://smartcoos.com/a/en/about-our-compnay" %></li>
+            <li>
+
+              <%= link_to "Register", new_user_registration_path %></li>
+              <li>
+
+                <%= link_to "Sign In", users_path %>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+           <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+
+          
+          
+          <%= yield %>
+
+
+          <div class="panel panel-default">
+
+            <div class="panel-footer">
+              <p>
+                <%= link_to "FAQs", "http://smartcoos.com/a/en/about-our-compnay" %>
+              </p>
+              <p>
+                <%= link_to "Terms", "http://smartcoos.com/a/en/about-our-compnay" %>
+              </p>
+              <p>
+                <%= link_to "Privacy", "http://smartcoos.com/a/en/about-our-compnay" %>
+              </p>
+              <p>
+                <%= link_to "Become a Teacher", "http://smartcoos.com/a/en/about-our-compnay" %>
+              </p>
+              <p>
+                <%= link_to "See it in Action", "http://smartcoos.com/a/en/about-our-compnay" %>
+              </p>
+            </div>
+          </div>
+
+
+
+        </body>
+        </html>
+
