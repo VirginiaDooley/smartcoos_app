@@ -10,6 +10,10 @@ end
 gem 'pg'
 end
 
+gem 'omniauth-github'
+# gem 'omniauth-facebook'
+# gem 'omniauth-twitter'
+
 gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'devise'

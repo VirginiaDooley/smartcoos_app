@@ -31,12 +31,12 @@
     <body>
      <div class="container">
       <div class="header">
-       <a href="/"><img src="/assets/logo.png" width='200' height= '44s'>
-       </img></a>
+       <img src="/assets/logo.png" width='200' height= '44s'>
+       </img>
        <ul class="nav nav-pills pull-right">
         <li class="active">
 
-          <%= link_to "Home", root_path %></li></li>
+          
           <li>
 
             <%= link_to "About", "http://smartcoos.com/a/en/about-our-compnay" %></li>
@@ -45,7 +45,13 @@
               <%= link_to "Register", new_user_registration_path %></li>
               <li>
 
-                <%= link_to "Sign In", users_path %>
+
+              </li>
+              <li>
+                <%= link_to_if current_user.nil?, 'Sign-in', new_user_session_path, method: :get do link_to 'Sign-out', destroy_user_session_path, method: :delete end %>
+              </li>
+              <li>
+                <%= link_to "User Home", user_session_path(:id => session.id), method: :get %>
               </li>
               <li>
                 <a href="#">Contact</a>
@@ -53,12 +59,12 @@
             </ul>
           </div>
 
-           <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-
+         
           
           
           <%= yield %>
+ <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
 
 
           <div class="panel panel-default">
