@@ -32,64 +32,68 @@
      <div class="container">
       <div class="header">
        <img src="/assets/logo.png" width='200' height= '44s'>
-       </img>
-       <ul class="nav nav-pills pull-right">
-        <li class="active">
+     </img>
+     <ul class="nav nav-pills pull-right">
+      <li class="active">
 
-          
+
+        <li>
+
+          <%= link_to "About", "http://smartcoos.com/a/en/about-our-compnay" %></li>
           <li>
 
-            <%= link_to "About", "http://smartcoos.com/a/en/about-our-compnay" %></li>
+            <%= link_to "Blog", " http://blog.smartcoos.com/" %>
+          </li>
             <li>
-
-              <%= link_to "Register", new_user_registration_path %></li>
-              <li>
-
-
-              </li>
-              <li>
-                <%= link_to_if current_user.nil?, 'Sign-in', new_user_session_path, method: :get do link_to 'Sign-out', destroy_user_session_path, method: :delete end %>
-              </li>
-              <li>
-                <%= link_to "User Home", user_session_path(:id => session.id), method: :get %>
-              </li>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-
          
-          
-          
-          <%= yield %>
- <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
 
 
-          <div class="panel panel-default">
-
-            <div class="panel-footer">
-              <p>
-                <%= link_to "FAQs", "http://smartcoos.com/a/en/about-our-compnay" %>
-              </p>
-              <p>
-                <%= link_to "Terms", "http://smartcoos.com/a/en/about-our-compnay" %>
-              </p>
-              <p>
-                <%= link_to "Privacy", "http://smartcoos.com/a/en/about-our-compnay" %>
-              </p>
-              <p>
-                <%= link_to "Become a Teacher", "http://smartcoos.com/a/en/about-our-compnay" %>
-              </p>
-              <p>
-                <%= link_to "See it in Action", "http://smartcoos.com/a/en/about-our-compnay" %>
-              </p>
-            </div>
-          </div>
+          <%= link_to "Register", new_user_registration_path %>
+        </li>
+         
+          <li>
+            <%= link_to_if current_user.nil?, 'Sign-in', new_user_session_path, method: :get do link_to 'Sign-out', destroy_user_session_path, method: :delete end %>
+          </li>
+          <li>
+            <%= link_to "User Home", user_session_path(:id => session.id), method: :get %>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
 
 
 
-        </body>
-        </html>
+
+      <%= yield %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
+
+      <div class="panel panel-default">
+
+        <div class="panel-footer">
+          <p>
+            <%= link_to "FAQs", "http://smartcoos.com/a/en/about-our-compnay" %>
+          </p>
+          <p>
+            <%= link_to "Terms", "http://smartcoos.com/a/en/about-our-compnay" %>
+          </p>
+          <p>
+            <%= link_to "Privacy", "http://smartcoos.com/a/en/about-our-compnay" %>
+          </p>
+          <p>
+            <%= link_to "Become a Teacher", "http://smartcoos.com/a/en/about-our-compnay" %>
+          </p>
+          <p>
+            <%= link_to "See it in Action", "http://smartcoos.com/a/en/about-our-compnay" %>
+          </p>
+        </div>
+      </div>
+
+
+
+    </body>
+    </html>
 

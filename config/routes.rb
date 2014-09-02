@@ -7,7 +7,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  root to: 'home#index'
+  # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+#   devise_scope :user do
+#   get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+# end
+
+root to: 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

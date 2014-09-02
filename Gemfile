@@ -11,7 +11,7 @@ gem 'pg'
 end
 
 gem 'omniauth-github'
-# gem 'omniauth-facebook'
+gem 'omniauth-facebook'
 # gem 'omniauth-twitter'
 
 gem 'rails_12factor', group: :production
@@ -47,6 +47,8 @@ gem 'spring',        group: :development
 
 # Use unicorn as the app server
  gem 'unicorn'
+#timeline
+ gem 'bootstrap-slider-rails', '~> 1.9.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
